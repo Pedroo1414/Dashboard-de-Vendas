@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+}
+
+header {
+  background: #111827;
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid #1f2937;
+}
+
+.container {
+  padding: 20px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* Upload */
+
+.upload-box {
+  margin-bottom: 20px;
+}
+
+.mensagem {
+  margin-top: 8px;
+  font-size: 14px;
+  min-height: 20px;
+}
+
+/* Cards */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #111827;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+}
+
+.card h3 {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Filtros */
+
+.filtros {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filtros select,
+.filtros button {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* Gráficos */
+
+.graficos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 20px;
+}
+
+.chart-box {
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+  height: 380px;
+  position: relative;
+}
+
+.chart-box canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Tabela */
+
+.tabela-box {
+  margin-top: 30px;
+}
+
+.tabela-wrapper {
+  background: white;
+  border-radius: 14px;
+  overflow: auto;
+  max-height: 340px;
+}
+
+#tabelaDados {
+  width: 100%;
+  border-collapse: collapse;
+  color: #111;
+  font-size: 13px;
+}
+
+#tabelaDados th,
+#tabelaDados td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+#tabelaDados thead {
+  background: #f3f4f6;
+  position: sticky;
+  top: 0;
+}
+
+/* Responsivo */
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .graficos {
+    grid-template-columns: 1fr;
+  }
+}

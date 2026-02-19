@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard de Vendas PRO+</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Excel -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+  <!-- CSV -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>📊 Dashboard de Vendas</h1>
+  </header>
+
+  <main class="container">
+
+    <!-- Upload -->
+    <section class="upload-box">
+      <input type="file" id="fileInput" accept=".xlsx,.csv" />
+      <div id="mensagem" class="mensagem"></div>
+    </section>
+
+    <!-- Cards -->
+    <section class="cards">
+      <div class="card">
+        <h3>💰 Receita</h3>
+        <p id="totalReceita">R$ 0</p>
+      </div>
+      <div class="card">
+        <h3>📦 Quantidade</h3>
+        <p id="totalQtd">0</p>
+      </div>
+      <div class="card">
+        <h3>🛍️ Produtos</h3>
+        <p id="totalProdutos">0</p>
+      </div>
+      <div class="card">
+        <h3>🏆 Melhor Mês</h3>
+        <p id="melhorMes">-</p>
+      </div>
+    </section>
+
+    <!-- Filtros -->
+    <section class="filtros">
+      <select id="filtroMes">
+        <option value="">Todos os meses</option>
+      </select>
+
+      <select id="filtroCategoria">
+        <option value="">Todas categorias</option>
+      </select>
+
+      <button id="limparFiltros">Limpar filtros</button>
+    </section>
+
+    <!-- Gráficos -->
+    <section class="graficos">
+      <div class="chart-box">
+        <canvas id="graficoCategoria"></canvas>
+      </div>
+
+      <div class="chart-box">
+        <canvas id="graficoMes"></canvas>
+      </div>
+    </section>
+
+    <!-- Tabela -->
+    <section class="tabela-box">
+      <h2>📋 Detalhamento das Vendas</h2>
+      <div class="tabela-wrapper">
+        <table id="tabelaDados">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
